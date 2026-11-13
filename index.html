@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Med Matrix: The Full Picture | Sandy Rodriguez, Anomalous</title>
+<meta name="description" content="Research prepared for Cole Siefer, Founder and CEO of Med Matrix. Ads, social, podcast, demographics, competitors, and a benchmark conversion map.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0A0A0A; --red:#E00020; --white:#FFFFFF; --ink:#141414;
+  --grey:#6B6B6B; --line:#E8E8E8; --soft:#F6F6F6; --dark2:#161616;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Archivo','Inter',Arial,sans-serif;line-height:1.05;letter-spacing:-0.02em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-family:'Archivo',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.num{color:var(--red);font-weight:700}
+.section{padding:84px 0}
+.section.dark{background:var(--black);color:var(--white)}
+.section.dark .eyebrow{color:var(--red)}
+.section.dark p.lede{color:#C9C9C9}
+h2{font-size:clamp(34px,6vw,56px);font-weight:900;margin:14px 0 10px}
+p.lede{font-size:18px;color:#555;max-width:720px;margin-bottom:40px}
+.section.dark p.lede{color:#C9C9C9}
+.rule{width:56px;height:5px;background:var(--red);border:none;margin:0 0 26px}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.96);backdrop-filter:blur(6px);border-bottom:1px solid #222}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:18px;height:58px}
+.brand{font-family:'Archivo',Arial,sans-serif;font-weight:900;font-size:15px;letter-spacing:.06em;color:#fff;text-decoration:none;white-space:nowrap}
+.brand b{color:var(--red)}
+.nav-links{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:#C9C9C9;text-decoration:none;font-size:13px;font-weight:600;padding:8px 10px;white-space:nowrap;border-radius:6px}
+.nav-links a:hover{color:#fff;background:#222}
+/* hero */
+.hero{background:var(--black);color:#fff;padding:96px 0 72px}
+.hero h1{font-size:clamp(46px,9vw,92px);font-weight:900;margin:18px 0 20px}
+.hero h1 span{color:var(--red)}
+.hero .sub{font-size:19px;color:#C9C9C9;max-width:640px;margin-bottom:14px}
+.hero .byline{font-size:14px;color:#888;margin-bottom:48px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2A2A2A;border:1px solid #2A2A2A}
+.stat{background:var(--black);padding:22px 20px}
+.stat .n{font-family:'Archivo',Arial,sans-serif;font-size:clamp(30px,5vw,44px);font-weight:900;color:var(--red);line-height:1}
+.stat .l{font-size:13px;color:#BDBDBD;margin-top:8px}
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.card h3{font-size:22px;font-weight:800;margin-bottom:8px}
+.card p{font-size:15px;color:#444}
+.card .big{font-family:'Archivo',Arial,sans-serif;font-size:44px;font-weight:900;color:var(--red);line-height:1}
+.card .cap{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:6px}
+.dark .card{background:var(--dark2);border-color:#2A2A2A}
+.dark .card p{color:#C9C9C9}
+.tag{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;margin-bottom:14px}
+.tag.ghost{background:transparent;color:var(--red);border:1px solid var(--red)}
+/* org tree */
+.tree{text-align:center}
+.tree .node{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 22px;min-width:220px}
+.tree .node strong{display:block;font-family:'Archivo',Arial,sans-serif;font-size:17px}
+.tree .node span{font-size:13px;color:var(--grey)}
+.tree .node.top{background:var(--black);color:#fff;border-color:var(--black)}
+.tree .node.top span{color:#C9C9C9}
+.tree .node.hot{border:2px solid var(--red)}
+.tree .node.hot strong{color:var(--red)}
+.tree .conn{width:2px;height:26px;background:#D5D5D5;margin:0 auto}
+.tree .row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.tree .col{display:flex;flex-direction:column;align-items:center;gap:0}
+.tree h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin:26px 0 12px}
+/* funnel */
+.funnel{display:flex;flex-direction:column;gap:14px;margin:8px 0 30px}
+.fpath{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+.fstep{flex:1;min-width:130px;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px 12px;font-size:14px;font-weight:600;text-align:center;color:var(--ink)}
+.fstep b{color:var(--red)}
+.farrow{align-self:center;padding:0 6px;color:var(--red);font-weight:900;font-size:18px}
+.fpath-label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-bottom:6px}
+/* bars */
+.bar-row{margin-bottom:16px}
+.bar-top{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:6px}
+.bar-top .v{color:var(--red);font-weight:700}
+.bar-track{height:14px;background:#EFEFEF;border-radius:999px;overflow:hidden}
+.bar-fill{height:100%;background:var(--red);border-radius:999px}
+/* tables */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+table{width:100%;border-collapse:collapse;min-width:760px;font-size:14px}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:var(--black);color:#fff;font-family:'Archivo',Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+tr:last-child td{border-bottom:none}
+td.n,th.n{text-align:right}
+td.hot{color:var(--red);font-weight:700}
+.dark .tbl-wrap{border-color:#2A2A2A}
+.note{font-size:13px;color:var(--grey);margin-top:14px}
+.dark .note{color:#999}
+/* lists */
+ul.clean{list-style:none}
+ul.clean li{padding:10px 0 10px 28px;position:relative;border-bottom:1px solid var(--line);font-size:15px}
+ul.clean li:last-child{border-bottom:none}
+ul.clean li::before{content:"";position:absolute;left:2px;top:18px;width:10px;height:10px;background:var(--red);border-radius:2px}
+.dark ul.clean li{border-color:#2A2A2A}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.kv div{background:#fff;padding:18px 20px}
+.kv .k{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.kv .v{font-family:'Archivo',Arial,sans-serif;font-size:20px;font-weight:800;margin-top:4px}
+.kv .v small{font-size:13px;font-family:'Inter',Arial,sans-serif;font-weight:500;color:#555}
+/* footer */
+footer{background:var(--black);color:#999;padding:56px 0 64px;font-size:13px;line-height:1.8}
+footer h3{color:#fff;font-size:20px;margin-bottom:12px}
+footer a{color:#fff}
+.cta-band{background:var(--red);color:#fff;padding:64px 0;text-align:center}
+.cta-band h2{color:#fff;margin-bottom:10px}
+.cta-band p{color:rgba(255,255,255,.9);max-width:560px;margin:0 auto}
+@media(max-width:760px){
+  .section{padding:60px 0}
+  .grid3,.grid2{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .kv{grid-template-columns:1fr}
+  .fstep{min-width:44%}
+  .hero{padding:72px 0 56px}
+  .nav-links a{font-size:12px;padding:8px 7px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top">MED MATRIX <b>/</b> RESEARCH</a>
+    <div class="nav-links">
+      <a href="#company">Company</a>
+      <a href="#offer">Offer</a>
+      <a href="#demographics">Demographics</a>
+      <a href="#ads">Ads</a>
+      <a href="#social">Social</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#competitors">Competitors</a>
+      <a href="#conversion">Conversion</a>
+      <a href="#plan">30 Days</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Med Matrix &nbsp;·&nbsp; Prepared for Cole Siefer, Founder and CEO</div>
+    <h1>The full picture,<br>before <span>day one.</span></h1>
+    <p class="sub">Every ad, every post, every episode, every patient path, read and organized. This is what your funnel looks like from the outside, and what I would do with it first.</p>
+    <p class="byline">Sandy Rodriguez, Anomalous &nbsp;·&nbsp; November 12, 2026</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="n">248</div><div class="l">Ads read in the Meta Ads Library</div></div>
+      <div class="stat"><div class="n">45</div><div class="l">Podcast episodes on YouTube</div></div>
+      <div class="stat"><div class="n">270</div><div class="l">Instagram reels in 3 months</div></div>
+      <div class="stat"><div class="n">271</div><div class="l">YouTube Shorts in 3 months</div></div>
+      <div class="stat"><div class="n">100</div><div class="l">50 providers + 50 influencers in the CRM</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">Demographics that buy from you</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="company">
+  <div class="wrap">
+    <div class="eyebrow">01 · The Company</div>
+    <h2>One clinic. One founder.<br>A real operation.</h2>
+    <hr class="rule">
+    <p class="lede">Founded July 2023 by Cole Siefer, now 22. One main clinic, a second space already leased, and a team that is still being built. This is the org as it stands on public record.</p>
+    <div class="tree">
+      <div class="node top"><strong>Cole Siefer</strong><span>Founder and CEO · Face and Growth</span></div>
+      <div class="conn"></div>
+      <div class="row">
+        <div class="col">
+          <h4>Founders</h4>
+          <div class="node"><strong>Carrie Siefer</strong><span>Co-founder · Aesthetics Director</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>Ann Marie Giedd</strong><span>Co-founder · Board-certified family practice</span></div>
+        </div>
+        <div class="col">
+          <h4>Clinical</h4>
+          <div class="node"><strong>Dr. Pedro Gonzalez</strong><span>Medical Director · Remote, not on staff page</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>Dr. Paul Laband, MD</strong><span>Internal medicine</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>Dr. Sasha Rose, ND</strong><span>Naturopathic doctor</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>Gabriel Rocha, PA-C</strong><span>Provider</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>Colin Renaud, PA-C</strong><span>Provider</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>Sophia Viner, DNP</strong><span>Nurse practitioner</span></div>
+        </div>
+        <div class="col">
+          <h4>Operations</h4>
+          <div class="node"><strong>Operations Director</strong><span>Name not public</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>General Manager</strong><span>Name not public</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>Will</strong><span>New Patient Director</span></div>
+        </div>
+        <div class="col">
+          <h4>Growth and Marketing</h4>
+          <div class="node hot"><strong>Director of Organic Content Growth</strong><span>OPEN · Editor + VAs report to this role</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>Media Buyer</strong><span>Open</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>Sales Closers</strong><span>Hiring</span></div>
+          <div style="height:10px"></div>
+          <div class="node"><strong>ThrillX</strong><span>External agency · Website and funnel</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="height:40px"></div>
+    <div class="grid3">
+      <div class="card"><div class="big">198</div><div class="cap">Maine Mall Rd, South Portland, ME</div><p style="margin-top:10px">The only clinic address on the site, the Google listing, and the schema. One main clinic.</p></div>
+      <div class="card"><div class="big">9,415</div><div class="cap">Sq ft leased Oct 2026, 244 Western Ave</div><p style="margin-top:10px">A second South Portland space, leased October 2026. It reads as expansion, not a move.</p></div>
+      <div class="card"><div class="big">4.8</div><div class="cap">Stars, 190+ Google reviews</div><p style="margin-top:10px">Patients rate the clinic 4.8 stars across 190 plus reviews. The reputation is already there.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="offer">
+  <div class="wrap">
+    <div class="eyebrow">02 · The Offer Stack</div>
+    <h2>Free up front.<br>$1,500 to get in.</h2>
+    <hr class="rule">
+    <p class="lede">The top of the funnel is generous. The paywall sits between the discovery call and the blood draw. That order shapes every conversion number that follows.</p>
+    <div class="grid3">
+      <div class="card">
+        <span class="tag">Free, top of funnel</span>
+        <h3>Practice Guide + $100 voucher</h3>
+        <p>Toward the first visit, captured by email. Plus a free 20 to 30 minute discovery call with a practice advisor, and a free Vitality lab test framed as an $842 value: 22 markers, 9 sex hormones, 8 thyroid, 5 vitamins and minerals. The test is free only with the paid onboarding, gated behind a see if you qualify quiz.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Core paid offer</span>
+        <h3>$1,500 all-in onboarding</h3>
+        <p>80 plus biomarker panel, InBody 770 body scan, provider prep, and a 60 minute provider consultation. The $100 voucher applies here. No insurance. HSA and FSA accepted, plus CareCredit and Cherry financing.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Ongoing revenue</span>
+        <h3>Follow-ups and monthly care</h3>
+        <p>Follow-up visits $275 each. Hormone therapy $70 to $200 a month. GLP-1 weight loss meds through compounding pharmacies, $250 to $500 a month. Supplements $20 to $100 a month.</p>
+      </div>
+    </div>
+    <div style="height:48px"></div>
+    <div class="fpath-label">Path 1 · Main site</div>
+    <div class="funnel">
+      <div class="fpath">
+        <div class="fstep">Main Site</div><div class="farrow">→</div>
+        <div class="fstep">Free discovery call</div><div class="farrow">→</div>
+        <div class="fstep"><b>$1,500 onboarding</b></div><div class="farrow">→</div>
+        <div class="fstep">Blood draw and scan</div><div class="farrow">→</div>
+        <div class="fstep">60-min consult</div><div class="farrow">→</div>
+        <div class="fstep">$275 follow-ups + monthly therapy</div>
+      </div>
+    </div>
+    <div class="fpath-label">Path 2 · Paid ads</div>
+    <div class="funnel">
+      <div class="fpath">
+        <div class="fstep">Ad</div><div class="farrow">→</div>
+        <div class="fstep">Quiz or condition landing page</div><div class="farrow">→</div>
+        <div class="fstep">Free discovery call</div><div class="farrow">→</div>
+        <div class="fstep"><b>$1,500 onboarding</b></div><div class="farrow">→</div>
+        <div class="fstep">60-min consult</div><div class="farrow">→</div>
+        <div class="fstep">$275 follow-ups + monthly therapy</div>
+      </div>
+    </div>
+    <p class="note">Paywall note: the $1,500 sits between the discovery call and the blood draw and scan. There is no free blood draw anywhere in the funnel, on the ads or on the main site.</p>
+  </div>
+</section>
+
+<section class="section" id="demographics">
+  <div class="wrap">
+    <div class="eyebrow">03 · The Three Demographics</div>
+    <h2>Three patients.<br>Three different buys.</h2>
+    <hr class="rule">
+    <p class="lede">Med Matrix publishes no demographics. These three are deduced from the offer stack, the ad themes, and the clinic's own patient stories. Shared thread: Maine, New Hampshire, and Massachusetts, cash-pay, middle to upper-middle class, and told their labs were normal.</p>
+    <div class="grid3">
+      <div class="card">
+        <span class="tag">1 · The core</span>
+        <h3>Women 40 to 60</h3>
+        <p><strong>Perimenopause and menopause.</strong> The highest-value patient. She buys all three profit engines at once: HRT at $70 to $200 a month for years, GLP-1 weight loss, and Botox. A dedicated menopause quiz funnel is built for her.</p>
+        <p style="margin-top:12px">Stories: Stacey in her 50s, Joy with six years of menopause and no sleep, Heidi at 55, Elizabeth at 60.</p>
+      </div>
+      <div class="card">
+        <span class="tag">2 · The volume</span>
+        <h3>Women 30 to 45</h3>
+        <p><strong>Weight loss, energy, early hormones.</strong> Weight loss is the biggest ad theme, and the weight-loss quiz funnel is built for her. She comes in for weight and fatigue, then converts into hormones and aesthetics over time.</p>
+        <p style="margin-top:12px">Stories: Ashley, three years postpartum and still not herself. Brianna, crashing every afternoon at 40. The gained 43 pounds in six months cases.</p>
+      </div>
+      <div class="card">
+        <span class="tag">3 · The stickiest</span>
+        <h3>Men 35 to 55</h3>
+        <p><strong>Low testosterone, weight, performance.</strong> Smallest of the three, but the stickiest. TRT patients stay on therapy indefinitely once stabilized. The clinic's own LinkedIn content speaks directly to men in their 30s and 40s about flat energy, brain fog, and low drive.</p>
+        <p style="margin-top:12px">Stories: 70 pounds down, 37 pounds down, Mathew down 25.</p>
+      </div>
+    </div>
+    <div style="height:28px"></div>
+    <div class="kv">
+      <div><div class="k">Addressable, 60-mile radius</div><div class="v">122,794 <small>women 40 to 60 · 51,087 cash-pay proxy</small></div></div>
+      <div><div class="k">Addressable, 60-mile radius</div><div class="v">94,391 <small>women 30 to 45 · 38,998 cash-pay proxy</small></div></div>
+      <div><div class="k">Addressable, 60-mile radius</div><div class="v">115,805 <small>men 35 to 55 · 48,040 cash-pay proxy</small></div></div>
+      <div><div class="k">Telehealth footprint</div><div class="v">ME + NH + MA <small>1.34M women 40 to 60 · 1.07M women 30 to 45 · 1.30M men 35 to 55</small></div></div>
+    </div>
+    <p class="note">Population: ACS 2020 to 2024, six counties in the 60-mile radius (Cumberland, York, Sagadahoc, Androscoggin, Rockingham NH, Strafford NH). Cash-pay proxy is households earning $100k plus, an upper bound, not a Census fact.</p>
+  </div>
+</section>
+
+<section class="section dark" id="ads">
+  <div class="wrap">
+    <div class="eyebrow">04 · The Advertising Engine</div>
+    <h2>248 ads. One message,<br>on repeat.</h2>
+    <hr class="rule">
+    <p class="lede">Every card in the Meta Ads Library, April 1 to November 11, 2026. All 248 Active, zero Inactive. The biggest launch was November 5, 2026: 98 cards in one day.</p>
+    <div class="grid3" style="margin-bottom:44px">
+      <div class="card"><div class="big">248</div><div class="cap">Cards, all Active</div><p style="margin-top:10px">Apr 1 to Nov 11, 2026. Biggest launch Nov 5: 98 cards.</p></div>
+      <div class="card"><div class="big">213</div><div class="cap">Video · 34 image</div><p style="margin-top:10px">Video is the format. 213 of 248 cards are video.</p></div>
+      <div class="card"><div class="big">141</div><div class="cap">Learn more CTAs</div><p style="margin-top:10px">See details 29. None shown on summary cards 75. Get Quote 1, Get offer 1.</p></div>
+    </div>
+    <h3 style="font-size:22px;margin-bottom:20px">What the ads actually say</h3>
+    <div class="bar-row"><div class="bar-top"><span>Weight loss (55 + 30 women 40+)</span><span class="v">85</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Labs / blood draw</span><span class="v">44</span></div><div class="bar-track"><div class="bar-fill" style="width:52%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Brand / office tour</span><span class="v">33</span></div><div class="bar-track"><div class="bar-fill" style="width:39%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Normal labs, still don't feel right</span><span class="v">30</span></div><div class="bar-track"><div class="bar-fill" style="width:35%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>General functional medicine</span><span class="v">16</span></div><div class="bar-track"><div class="bar-fill" style="width:19%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Women's health</span><span class="v">8</span></div><div class="bar-track"><div class="bar-fill" style="width:9%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Unclear</span><span class="v">8</span></div><div class="bar-track"><div class="bar-fill" style="width:9%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Hiring</span><span class="v">7</span></div><div class="bar-track"><div class="bar-fill" style="width:8%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Fatigue / energy</span><span class="v">5</span></div><div class="bar-track"><div class="bar-fill" style="width:6%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Longevity / aging</span><span class="v">5</span></div><div class="bar-track"><div class="bar-fill" style="width:6%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Metabolic</span><span class="v">2</span></div><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Offer / pricing</span><span class="v">2</span></div><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div></div>
+    <div class="bar-row"><div class="bar-top"><span>Thyroid</span><span class="v">2</span></div><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div></div>
+    <div style="height:32px"></div>
+    <div class="grid2">
+      <div class="card">
+        <h3>13 URLs, 4 real pages</h3>
+        <p>Thirteen landing URLs collapse to four distinct pages: the Voucher page, the Vitality quiz, the Vitality explore page, and Careers. The rest is audience targeting on top of the same three offers plus hiring.</p>
+      </div>
+      <div class="card">
+        <h3>19 hiring groups point to one role</h3>
+        <p>Nineteen hiring ad groups link to the Director of Organic Content Growth posting. The ads are already recruiting for this seat.</p>
+      </div>
+    </div>
+    <p class="note">Data quality note: some Library IDs in the sheet may be misaligned with their rows, so no Library ID is quoted as verified here. Hook and theme counts come from card text and are unaffected.</p>
+  </div>
+</section>
+
+<section class="section" id="social">
+  <div class="wrap">
+    <div class="eyebrow">05 · Social Reality</div>
+    <h2>They post 2 to 3 times a day.<br>Almost nobody watches.</h2>
+    <hr class="rule">
+    <p class="lede">Last 3 months, August 12 to November 12, 2026. The volume is real. The audience is not, yet. That gap is the job.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Channel</th><th class="n">Posts in range</th><th class="n">Total views</th><th class="n">Median views</th><th class="n">Posts / week</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Instagram</strong> · @medmatrixmaine</td><td class="n">270 reels</td><td class="n hot">85,881</td><td class="n">238</td><td class="n">~20</td><td>14.7K followers</td></tr>
+          <tr><td><strong>YouTube Shorts</strong> · @MedMatrixUSA</td><td class="n">271</td><td class="n hot">~61,760</td><td class="n">92</td><td class="n">~20</td><td>Same content cross-posted from Reels</td></tr>
+          <tr><td><strong>YouTube long-form</strong></td><td class="n">51 videos</td><td class="n hot">4,929</td><td class="n">38</td><td class="n">~4 avg</td><td class="hot">Collapsed: 37 in Aug 18-31, 9 Sep, 5 Oct, 0 since Oct 26</td></tr>
+          <tr><td><strong>Facebook</strong> · MedMatrixusa</td><td class="n">0</td><td class="n">n/a</td><td class="n">n/a</td><td class="n">0</td><td class="hot">No organic post since Jul 5, 2026</td></tr>
+          <tr><td><strong>LinkedIn</strong></td><td class="n">3</td><td class="n">n/a</td><td class="n">n/a</td><td class="n">~0.2</td><td>All Nov 10-12, 2026</td></tr>
+          <tr><td><strong>TikTok</strong> · @medmatrixusa.com</td><td class="n">35 videos</td><td class="n hot">7,591</td><td class="n">118</td><td class="n">~11.7</td><td>Top video 2,713 views, Nov 2 lupus story, 36% of all TikTok views</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="height:28px"></div>
+    <div class="grid3">
+      <div class="card"><div class="big">954</div><div class="cap">YouTube subscribers · 566 videos total</div><p style="margin-top:10px">The library is big. The audience per video is small: median 38 views on long-form.</p></div>
+      <div class="card"><div class="big">6.4K</div><div class="cap">Facebook followers, MedMatrixusa</div><p style="margin-top:10px">This page runs all the ads. medmatrixmaine, 14.7K followers, runs zero ads.</p></div>
+      <div class="card"><div class="big">2,713</div><div class="cap">Views, top TikTok video</div><p style="margin-top:10px">One lupus patient story, Nov 2, is 36 percent of all TikTok views. Proof the stories work when they land.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="podcast">
+  <div class="wrap">
+    <div class="eyebrow">06 · The Podcast</div>
+    <h2>The Med Matrix Method<br>has never had a guest.</h2>
+    <hr class="rule">
+    <p class="lede">The show exists. The audience is small. And in 45 episodes, the hosts have only ever talked to each other. That is the opening.</p>
+    <div class="grid3">
+      <div class="card"><div class="big">Mar 24, 2024</div><div class="cap">First episode ever</div><p style="margin-top:10px">Stem Cells, PRP, and Peptides for Joint Pain. A solo presentation by Dr. Jeff Kreher.</p></div>
+      <div class="card"><div class="big">45 / 68</div><div class="cap">Episodes watchable / listed</div><p style="margin-top:10px">45 full episodes watchable on YouTube. 68 listed on the clinic's own podcast page.</p></div>
+      <div class="card"><div class="big">31</div><div class="cap">Episodes hosted by Cole</div><p style="margin-top:10px">Cole Siefer hosted 31 of 68. He built the show. No outside guest in any of the 29 recent episodes.</p></div>
+    </div>
+    <p class="note">Guest outreach is objective one of the role: weekly outreach to providers with personal brands, invite them on the podcast. A CRM of 50 providers is already built for it.</p>
+  </div>
+</section>
+
+<section class="section" id="competitors">
+  <div class="wrap">
+    <div class="eyebrow">07 · Competitors</div>
+    <h2>Five clinics<br>chasing the same patient.</h2>
+    <hr class="rule">
+    <p class="lede">Ranked by service overlap and Maine and New Hampshire geography, not market share. No public market-share data exists for these clinics.</p>
+    <div class="grid3">
+      <div class="card"><span class="tag">1</span><h3>TruForm Longevity Center</h3><p>Falmouth, ME. Concierge longevity, 64 plus biomarker panel, hormone optimization, functional medicine, regenerative, aesthetics. TRT Basic $225 a month.</p></div>
+      <div class="card"><span class="tag">2</span><h3>Cosmetic Enhancement Center of New England</h3><p>Portland, Falmouth, and Waterville, ME. GLP-1 semaglutide and tirzepatide plus med spa, InBody, labs. $150 a month plus meds, $300 enrollment.</p></div>
+      <div class="card"><span class="tag">3</span><h3>MaineCHI</h3><p>Winslow and Waterville, ME. Functional, regenerative, peptides, longevity, naturopathic, chiropractic, acupuncture, and IV under one roof. Founded 2015.</p></div>
+      <div class="card"><span class="tag">4</span><h3>Seacoast Integrative Medicine</h3><p>Portsmouth, NH. Functional medicine, advanced biomarker testing, BHRT for peri and menopause, medically supervised GLP-1.</p></div>
+      <div class="card"><span class="tag">5</span><h3>AIMA Functional Medicine</h3><p>Nashua, NH. Functional plus conventional plus traditional medicine, telemedicine across the US.</p></div>
+    </div>
+    <p class="note">Telehealth price pressure also applies: national TRT and GLP-1 telehealth providers serve Maine and New Hampshire at lower monthly prices than any local clinic.</p>
+  </div>
+</section>
+
+<section class="section dark" id="conversion">
+  <div class="wrap">
+    <div class="eyebrow">08 · Conversion Map</div>
+    <h2>What $3,000 a month<br>should buy, per demo.</h2>
+    <hr class="rule">
+    <p class="lede">Benchmark math, MID case, at $3,000 a month of Meta spend per demographic. Headline: about 20 new patients a month at $9,000 a month total, blended CAC around $450, 12-month cohort revenue around $96,900.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Demographic</th><th class="n">Ad Spend</th><th class="n">Impressions</th><th class="n">CTR</th><th class="n">Clicks</th><th class="n">CPC</th><th class="n">Conv. Rate</th><th class="n">Conversions</th><th class="n">L2C Rate</th><th class="n">Customers</th><th class="n">CPA</th><th class="n">AOV</th><th class="n">Revenue</th><th class="n">ROAS</th><th class="n">CAC</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Women 40-60</strong></td><td class="n">$3,000.00</td><td class="n">136,364</td><td class="n">0.49%</td><td class="n">667</td><td class="n">$4.50</td><td class="n">12.00%</td><td class="n">80</td><td class="n">11.20%</td><td class="n hot">9.0</td><td class="n">$37.50</td><td class="n">$5,398.00</td><td class="n">$48,366.00</td><td class="n">16.12</td><td class="n hot">$335.00</td></tr>
+          <tr><td><strong>Women 30-45</strong></td><td class="n">$3,000.00</td><td class="n">136,364</td><td class="n">0.59%</td><td class="n">800</td><td class="n">$3.75</td><td class="n">10.00%</td><td class="n">80</td><td class="n">7.90%</td><td class="n hot">6.3</td><td class="n">$37.50</td><td class="n">$4,167.00</td><td class="n">$26,252.00</td><td class="n">8.75</td><td class="n hot">$476.00</td></tr>
+          <tr><td><strong>Men 35-55</strong></td><td class="n">$3,000.00</td><td class="n">136,364</td><td class="n">0.40%</td><td class="n">545</td><td class="n">$5.50</td><td class="n">8.00%</td><td class="n">44</td><td class="n">11.00%</td><td class="n hot">4.8</td><td class="n">$68.18</td><td class="n">$4,633.00</td><td class="n">$22,289.00</td><td class="n">7.43</td><td class="n hot">$624.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="height:28px"></div>
+    <div class="grid3">
+      <div class="card"><div class="big">3.9–17.6</div><div class="cap">Patients / mo, women 40-60</div><p style="margin-top:10px">Low to high range. CAC $171 to $769 across the range.</p></div>
+      <div class="card"><div class="big">2.9–14.2</div><div class="cap">Patients / mo, women 30-45</div><p style="margin-top:10px">Low to high range. CAC $212 to $1,047 across the range.</p></div>
+      <div class="card"><div class="big">2.5–10.4</div><div class="cap">Patients / mo, men 35-55</div><p style="margin-top:10px">Low to high range. CAC $288 to $1,177 across the range.</p></div>
+    </div>
+    <p class="note">How to read it: Conversions are leads from clicks. L2C Rate is lead to customer. Customers are Conversions times L2C Rate. CPA is spend per lead. AOV is the 12-month value per patient, onboarding plus the ongoing mix. Revenue is the 12-month cohort. ROAS is Revenue divided by spend. CAC is spend per enrolled patient.</p>
+    <p class="note">State clearly: these are benchmarks from public sources, not Med Matrix internal data. The funnel is a 4 to 12 week prospect-to-booking cycle, so monthly patients are starts, not same-month cash. First-month revenue alone covers the spend in the MID case for every demo. The real money is months 2 to 12.</p>
+  </div>
+</section>
+
+<section class="section" id="plan">
+  <div class="wrap">
+    <div class="eyebrow">09 · What I Would Do</div>
+    <h2>First 30 days.<br>Measured at 90.</h2>
+    <hr class="rule">
+    <p class="lede">Three moves, each tied to a number on this page. No promises without a number attached.</p>
+    <div class="grid3">
+      <div class="card">
+        <span class="tag">A</span>
+        <h3>Book guests for the podcast</h3>
+        <p>Weekly outreach to providers with personal brands, invite them on the show. The podcast has never had an outside guest, and a CRM of 50 providers is already built and ready to work. Every guest is a new audience and a new episode.</p>
+      </div>
+      <div class="card">
+        <span class="tag">B</span>
+        <h3>Restart the weekly YouTube series</h3>
+        <p>Long-form collapsed to zero since October 26. One new episode every week, produced end to end, signed off before publish. The channel has 566 videos and 954 subscribers. The library is there. The cadence is not.</p>
+      </div>
+      <div class="card">
+        <span class="tag">C</span>
+        <h3>Repackage the short form</h3>
+        <p>270 reels and 271 Shorts in three months, medians of 238 and 92 views. The volume is already there. The packaging is the gap: hooks, titles, and the patient stories that already work, like the lupus story at 2,713 views.</p>
+      </div>
+    </div>
+    <div style="height:28px"></div>
+    <div class="kv">
+      <div><div class="k">90 days · Measure this</div><div class="v">Discovery calls booked <small>per demo, per week</small></div></div>
+      <div><div class="k">90 days · Measure this</div><div class="v">Show rate <small>booked calls that attend</small></div></div>
+      <div><div class="k">90 days · Measure this</div><div class="v">Cost per enrolled patient <small>per demo, against the $335 / $476 / $624 benchmarks</small></div></div>
+      <div><div class="k">90 days · Measure this</div><div class="v">Guests booked <small>podcast guests confirmed and recorded</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>The research is done.<br>The first move is yours.</h2>
+    <p>Every number on this page is sourced below. Share it with your partners, and bring your questions to the call.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3>Sources</h3>
+    <p>Meta Ads Library, MedMatrixusa page 102263979538709. Med Matrix own site and careers page. U.S. Census, ACS 2020 to 2024. WordStream 2025 and 2026 benchmarks. Pressed Solutions 2025. StartupHeist 2026. Ambrose Marketing 2026.</p>
+    <p style="margin-top:12px">All figures from public sources, November 12, 2026. Med Matrix publishes no demographics or internal numbers. Demographics are deduced from the offer stack, ad themes, and patient stories. Conversion rates are public benchmarks for a funnel shaped like theirs, not Med Matrix internal data. Some Ads Library IDs in the working sheet may be misaligned, so no Library ID is quoted here.</p>
+    <p style="margin-top:12px">Prepared by Sandy Rodriguez, Anomalous, for Cole Siefer, Founder and CEO, Med Matrix. &nbsp;·&nbsp; <a href="https://goanomalous.com">goanomalous.com</a></p>
+  </div>
+</footer>
+<script>
+// Smooth scroll offset for sticky nav
+document.querySelectorAll('nav a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + window.pageYOffset - 70, behavior:'smooth'}); }
+  });
+});
+</script>
+</body>
+</html>
